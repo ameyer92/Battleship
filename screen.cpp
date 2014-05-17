@@ -14,7 +14,7 @@ void screen::addLight( unsigned char row, unsigned char col ) {
 	grid[row] |= ( 1 << col );
 }
 
-void screen::subLight( unsighed char row, unsigned char col ) {
+void screen::subLight( unsigned char row, unsigned char col ) {
 	grid[row] &= ~( 1 << col );
 }
 
@@ -27,10 +27,8 @@ void screen::flicker( void ) {
 }
 
 bool screen::collisionCheck( unsigned char unique_ship_tiles ) {
-	
-    unsigned char count = unique_ship_tiles;
-	
-    for ( int i = 0; i < 4; i++ ){
+	unsigned char count = unique_ship_tiles;
+	for ( int i = 0; i < 4; i++ ){
 		for ( int j = 0; j < 4; j++ ) {
 			if ( ( grid[i] & ( 1 << j ) ) == ( 1 << j ) ) {
 				count--;
