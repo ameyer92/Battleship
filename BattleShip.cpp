@@ -11,6 +11,7 @@ int main( void ) {
 	game BattleShip( 1 );	
 	screen defense_board;
 	
+	//Hello, Anthony was here;
 	while( 1 ) {
 		setDingy( defense_board );
 	}
