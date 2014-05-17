@@ -7,25 +7,15 @@
 #define F_CPU 16000000UL
 #include <util/delay.h>
 
-//henry test
-//I see you henry
-
 int main( void ) {
 	game BattleShip( 1 );	
 	screen defense_board;
-	while ( 1 ) {								
+	
+	while( 1 ) {
 		setDingy( defense_board );
-		setDualDingy( defense_board );
-		setTriDingy( defense_board );
-		/*pseudo code
-		send through UART that you are ready for the game to begin.
-		when the oponent also sends that information through UART, turn one will begin.
-		
-		waitforOponent();
-		while ( turn < 16 ) {
-			playgame
-		}
-		*/
 	}
+	
+
+	
 }
 
