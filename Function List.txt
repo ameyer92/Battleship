@@ -1,0 +1,44 @@
+Written by Anthony ( 865-599-5036 )
+--Function list--
+
+*in class screen (screen.cpp)
+#include "screen.h"
+
+void addLight( unsigned char row, unsigned char col );
+//takes an ( x, y ) coordinate and adds the corresponding bit to the grid array
+//in the class. It basically lights up the grid at the ( x, y ) coordinate 
+void subLight( unsigned char row, unsigned char col );
+//takes an ( x, y ) coordinate and puts 0 in the grid array in the class.
+//It basically removes a light on the grid at the ( x, y ) position
+void flicker( void );
+//lights up each row in a grid one time and then turns the grid off
+//this needs to be constantly called in order for the grid to appear on
+bool collisionCheck( unsigned char unique_ship_tiles );
+//compares the numbers of LEDs that are lit to the argument that is passed in.
+//If the number of LEDs lit does not equal the argument that is passed in, the ships
+//were not properly placed and the user must replace there ship
+void clearGrid( void );
+//Used to turn off all lights on the grid and clear any bits within the stored
+//grid array in the class
+
+*function file shipset 
+#include "shipset.h"
+void setDingy( screen current_screen );
+//Takes a screen as an argument and gets input from the user as they place their first 
+//ship (size == 1) on the grid
+void setDualDingy( screen current_screen );
+//Takes a screen as an argument and gets input from the user as they place their 
+//second ship (size == 2) on the grid. Note* this ship is automatically vertical
+void setTriDingy( screen current_screen );
+//takes a screen as an argument and gets input from the user as they place thier
+//third ship (size == 3) on the grid. Note* this ship is automatically horizontal
+
+*function file wegotthefunk
+#include "wegotthefunk.h"
+unsigned char getInput( screen current_screen );
+//basically runs a loop and returns which button the user presses
+
+void clearScreen( void );
+//This is the general way to turn off the screen regardless of what any class's grid
+//has within it. This is used when you want to turn the screen off, but don't want to
+//erase what is stored in a class's screen
