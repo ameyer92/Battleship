@@ -10,6 +10,8 @@ void setDingy( screen current_screen ) {
 	y_pos = 0;
 	current_screen.addLight( x_pos, y_pos );	//lights up coordinate ( 1, A ) 
 	
+    
+    //Chirag was here
 	while ( 1 ) {
 		input_direction = getInput( current_screen );
 		if ( input_direction == 0 && y_pos != 0 ) {
