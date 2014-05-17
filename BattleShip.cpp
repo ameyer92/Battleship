@@ -7,13 +7,14 @@
 #define F_CPU 16000000UL
 #include <util/delay.h>
 
+//Anthony was here anyways..
 int main( void ) {
 	game BattleShip( 1 );	
 	screen defense_board;
 	
-	//Hello, Anthony was here;
 	while( 1 ) {
 		setDingy( defense_board );
+		setDualDingy( defense_board );
 	}
 	
 
