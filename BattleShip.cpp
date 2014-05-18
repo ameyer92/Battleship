@@ -13,11 +13,18 @@ int main( void ) {
 	screen defense_board;
 	
 	
-	setDingy( defense_board );
-	setDualDingy( defense_board );
-	setTriDingy( defense_board );
+	
 	while ( 1 ) {
-		defense_board.flicker();
+		setDingy( defense_board );
+		setDualDingy( defense_board );
+		setTriDingy( defense_board );
+		while ( 1 ) {
+			if ( getInput( defense_board ) == 4) {
+				defense_board.clearGrid();
+				break;
+			}
+		}
 	}
 }
 
+ 
