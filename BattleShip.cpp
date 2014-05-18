@@ -12,12 +12,12 @@ int main( void ) {
 	game BattleShip( 1 );	
 	screen defense_board;
 	
-	while( 1 ) {
-		setDingy( defense_board );
-		setDualDingy( defense_board );
+	
+	setDingy( defense_board );
+	setDualDingy( defense_board );
+	setTriDingy( defense_board );
+	while ( 1 ) {
+		defense_board.flicker();
 	}
-	
-
-	
 }
 
