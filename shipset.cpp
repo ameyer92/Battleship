@@ -1,6 +1,6 @@
 #include <avr/io.h>
 #include "screen.h"
-#include "wegotthefunk.h"
+#include "functions.h"
 #include "shipset.h"
 
 void setDingy( screen &green_grid, screen &red_grid, bool ship_locations[4][4] ) {

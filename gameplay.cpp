@@ -1,6 +1,6 @@
 #include <avr/io.h>
 #include "screen.h"
-#include "wegotthefunk.h"
+#include "functions.h"
 #include "gameplay.h"
 #define F_CPU 16000000UL
 #include <util/delay.h>

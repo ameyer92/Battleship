@@ -1,7 +1,7 @@
 //The main .cpp file.
 #include <avr/io.h>			//needed for using the avr microcontroller
 #include "screen.h"			//used for storing grid information and lighting up arrays
-#include "wegotthefunk.h"	//general functions
+#include "functions.h"		//general functions
 #include "shipset.h"		//functions for setting the user's ships
 #include "gameplay.h"		//functions for actual gameplay, called after setting ships
 #define F_CPU 16000000UL	//Clock speed

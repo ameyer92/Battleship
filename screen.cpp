@@ -1,6 +1,6 @@
 #include <avr/io.h>
 #include "screen.h"
-#include "wegotthefunk.h"
+#include "functions.h"
 
 screen::screen( void ) {
 	grid[0] = 0xE0;
