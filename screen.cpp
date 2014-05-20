@@ -7,8 +7,16 @@ screen::screen( void ) {
 	grid[1] = 0xD0;
 	grid[2] = 0xB0;
 	grid[3] = 0x70;
+	grid_color = 0;
 }
 
+screen::screen( bool green_or_red ) {
+	grid[0] = 0xE0;
+	grid[1] = 0xD0;
+	grid[2] = 0xB0;
+	grid[3] = 0x70;
+	grid_color = green_or_red;
+}
 
 void screen::addLight( unsigned char row, unsigned char col ) {
 	grid[row] |= ( 1 << col );
@@ -19,11 +27,18 @@ void screen::subLight( unsigned char row, unsigned char col ) {
 }
 
 void screen::flicker( void ) {
-	unsigned char i;
-	for ( i = 0; i < 4; i++ ) {
-		PORTC = grid[i];
+	if ( grid_color == 0 ) {
+		for ( unsigned char i = 0; i < 4; i++ ) {
+			PORTC = grid[i];
+		}
+		clearGreen();
 	}
-	clearScreen();
+	else if ( grid_color == 1 ) {
+		for ( unsigned char i = 0; i < 4; i++ ) {
+			PORTA = grid[i];
+		}
+		clearRed();
+	}
 }
 
 bool screen::collisionCheck( unsigned char unique_ship_tiles ) {

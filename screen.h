@@ -4,6 +4,7 @@
 class screen {
 	public:
 		screen();
+		screen( bool is_green_or_red );
 		void addLight( unsigned char row, unsigned char col );
 		void subLight( unsigned char row, unsigned char col );
 		void flicker( void );
@@ -11,6 +12,7 @@ class screen {
 		void clearGrid( void );
 	private:
 		unsigned char grid[4];
+		bool grid_color;			//0 for green, 1 for red
 };
 
 #endif

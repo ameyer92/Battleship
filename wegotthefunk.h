@@ -1,8 +1,11 @@
 #ifndef WEGOTTHEFUNK_H
 #define WEGOTTHEFUNK_H
 
-bool buttonDelay(float delay, bool buttonPress);
-char getInput( screen current_screen );
-void clearScreen( void );
+void init_MCU( void );
+//bool buttonDelay(float delay, bool buttonPress);
+unsigned char getInput( screen green_grid, screen red_grid );
+void reset_locations( bool locations[4][4] );
+void clearGreen( void );
+void clearRed( void );
 
 #endif
